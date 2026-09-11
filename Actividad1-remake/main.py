@@ -7,7 +7,7 @@ from versaldo import versaldo
 
 sistema = True
 
-cuenta_juan = Cuenta(101, 50000)
+cuenta_juan = Cuenta(100, 50000)
 cuenta_ana = Cuenta(102, 30000)
 cliente_juan = Cliente(30123456, "Juan", cuenta_juan)
 cliente_ana = Cliente(30987654, "Ana", cuenta_ana)
