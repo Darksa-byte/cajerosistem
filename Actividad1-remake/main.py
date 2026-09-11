@@ -5,7 +5,6 @@ from extraccion import extraerdinero
 from transferencia import transferir
 from versaldo import versaldo
 
-
 sistema = True
 
 cuenta_juan = Cuenta(100, 50000)
