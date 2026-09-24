@@ -17,17 +17,17 @@ class Cajero:
         return self.__dinerodis
 
     def consultardd(self, dineroaextraer):
-        if dineroaextraer <= 0:
-            return False
-        return self.__dinerodisponible >= dineroaextraer
+        self.__dinerodis = (
+            dineroaextraer > 0
+            and self.__dinerodisponible >= dineroaextraer
+        )
+        return self.__dinerodis
 
     def extraerdinero(self, dineroaextraer):
-        if self.consultardd(dineroaextraer):
-            self.__dinerodisponible -= dineroaextraer
-            self.__dinerodis = True
-            return True
+        if not self.consultardd(dineroaextraer):
+            return False
 
-        self.__dinerodis = False
-        return False
+        self.__dinerodisponible -= dineroaextraer
+        return True
 
 
